@@ -107,3 +107,8 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+CakePlugin::load('search',array(
+    'Post' => array('routes' => true),
+    'search' => array('bootstrap' => true),
+    'WebmasterTools' => array('bootstrap' => true, 'routes' => true),
+));

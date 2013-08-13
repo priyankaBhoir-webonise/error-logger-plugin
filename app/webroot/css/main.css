@@ -1,0 +1,87 @@
+a:link {color:#000000;}      /* unvisited link */
+a:visited {color:#000000;}  /* visited link */
+a:hover {color:#77CC11;}  /* mouse over link */
+a:active {color:#77CC11;}
+body
+{
+    background-color: #FBFBEF;
+}
+
+.menubar
+{
+    background-image: url("../img/mw3REBQ.jpg");
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+    background-color: #99FF99;
+    padding-top: 15px;
+}
+
+.formclass{
+    width:50%;
+    margin:0 auto;
+}
+
+.formclass fieldset
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.tableclass{
+    width:100%;
+    margin:0 auto;
+}
+
+.menu
+{
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.main
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+}
+
+.main h3
+{
+    text-align: center;
+}
+
+.blog
+{
+    border: 1px solid #77CC11;
+    background-color: #ffffff;
+    width: 600px;
+    box-shadow: 10px 10px 5px #888888;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.readMore a
+{
+    text-decoration: none;
+    font-size: small;
+}
+
+.blogTitle
+{
+    font-weight: bold;
+}
+
+.blogCreatedOn
+{
+    font-size: x-small;
+}
+
+.error
+{
+    color: red;
+    font-size: small;
+}
