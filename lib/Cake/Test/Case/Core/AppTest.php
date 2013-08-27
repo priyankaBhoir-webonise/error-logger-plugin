@@ -76,7 +76,7 @@ class AppTest extends CakeTestCase {
 		App::build();
 		App::build(array(
 			'Model' => array('/path/to/models/'),
-			'Controller' => array('/path/to/controllers/'),
+			'Controller' => array('/path/to/Controllers/'),
 		), App::APPEND);
 		$new = App::path('Model');
 		$expected = array(
@@ -87,7 +87,7 @@ class AppTest extends CakeTestCase {
 		$new = App::path('Controller');
 		$expected = array(
 			APP . 'Controller' . DS,
-			'/path/to/controllers/'
+			'/path/to/Controllers/'
 		);
 		$this->assertEquals($expected, $new);
 
@@ -97,7 +97,7 @@ class AppTest extends CakeTestCase {
 	}
 
 /**
- * tests that it is possible to set up paths using the CakePHP 1.3 notation for them (models, behaviors, controllers...)
+ * tests that it is possible to set up paths using the CakePHP 1.3 notation for them (models, behaviors, Controllers...)
  *
  * @return void
  */
@@ -137,12 +137,12 @@ class AppTest extends CakeTestCase {
 		$this->assertEquals($expected, $result);
 		$this->assertEquals($expected, App::path('Model/Behavior'));
 
-		App::build(array('controllers' => array('/path/to/controllers/')));
+		App::build(array('Controllers' => array('/path/to/Controllers/')));
 		$expected = array(
-			'/path/to/controllers/',
+			'/path/to/Controllers/',
 			APP . 'Controller' . DS
 		);
-		$result = App::path('controllers');
+		$result = App::path('Controllers');
 		$this->assertEquals($expected, $result);
 		$this->assertEquals($expected, App::path('Controller'));
 

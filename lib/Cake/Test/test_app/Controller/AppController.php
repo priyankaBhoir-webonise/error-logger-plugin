@@ -27,11 +27,11 @@ App::uses('Controller', 'Controller');
  * This is a placeholder class.
  * Create the same file in app/Controller/AppController.php
  *
- * Add your application-wide methods in the class below, your controllers
+ * Add your application-wide methods in the class below, your Controllers
  * will inherit them.
  *
  * @package       Cake.Controller
- * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
+ * @link http://book.cakephp.org/2.0/en/Controllers.html#the-app-controller
  */
 class AppController extends Controller {
 }

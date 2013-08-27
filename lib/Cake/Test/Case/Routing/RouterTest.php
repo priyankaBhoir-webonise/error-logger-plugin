@@ -127,7 +127,7 @@ class RouterTest extends CakeTestCase {
 	}
 
 /**
- * testMapResources with plugin controllers.
+ * testMapResources with plugin Controllers.
  *
  * @return void
  */

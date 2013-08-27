@@ -601,7 +601,7 @@ class BasicsTest extends CakeTestCase {
 	}
 
 /**
- * test LogError()
+ * test LogErrorsDemo()
  *
  * @return void
  */
@@ -615,7 +615,7 @@ class BasicsTest extends CakeTestCase {
 			CakeLog::disable('stderr');
 		}
 
-		LogError('Testing LogError() basic function');
+		LogError('Testing LogErrorsDemo() basic function');
 		LogError("Testing with\nmulti-line\nstring");
 
 		if (CakeLog::stream('stderr')) {
@@ -623,7 +623,7 @@ class BasicsTest extends CakeTestCase {
 		}
 
 		$result = file_get_contents(LOGS . 'error.log');
-		$this->assertRegExp('/Error: Testing LogError\(\) basic function/', $result);
+		$this->assertRegExp('/Error: Testing LogErrorsDemo\(\) basic function/', $result);
 		$this->assertNotRegExp("/Error: Testing with\nmulti-line\nstring/", $result);
 		$this->assertRegExp('/Error: Testing with multi-line string/', $result);
 	}

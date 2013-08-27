@@ -25,7 +25,7 @@ App::uses('CakeRoute', 'Routing/Route');
  * Parses the request URL into controller, action, and parameters. Uses the connected routes
  * to match the incoming URL string to parameters that will allow the request to be dispatched. Also
  * handles converting parameter lists into URL strings, using the connected routes. Routing allows you to decouple
- * the way the world interacts with your application (URLs) and the implementation (controllers and actions).
+ * the way the world interacts with your application (URLs) and the implementation (Controllers and actions).
  *
  * ### Connecting routes
  *
@@ -137,7 +137,7 @@ class Router {
 	);
 
 /**
- * List of resource-mapped controllers
+ * List of resource-mapped Controllers
  *
  * @var array
  */

@@ -53,21 +53,21 @@ $config['roles'] = array(
 //-------------------------------------
 $config['rules']['allow'] = array(
 	'/*' => 'Role/admin',
-	'/controllers/*/manager_*' => 'Role/manager',
-	'/controllers/reports/*' => 'Role/sales',
-	'/controllers/invoices/*' => 'Role/accounting',
-	'/controllers/invoices/edit' => 'User/db_manager_2',
-	'/controllers/db/*' => 'Role/database_manager',
-	'/controllers/*/(add|edit|publish)' => 'User/stan',
-	'/controllers/users/dashboard' => 'Role/default',
+	'/Controllers/*/manager_*' => 'Role/manager',
+	'/Controllers/reports/*' => 'Role/sales',
+	'/Controllers/invoices/*' => 'Role/accounting',
+	'/Controllers/invoices/edit' => 'User/db_manager_2',
+	'/Controllers/db/*' => 'Role/database_manager',
+	'/Controllers/*/(add|edit|publish)' => 'User/stan',
+	'/Controllers/users/dashboard' => 'Role/default',
 	// test for case insensitivity
-	'controllers/Forms/NEW' => 'Role/data_acquirer',
+	'Controllers/Forms/NEW' => 'Role/data_acquirer',
 );
 $config['rules']['deny'] = array(
 	// accountants and sales should not delete anything
-	'/controllers/*/delete' => array(
+	'/Controllers/*/delete' => array(
 		'Role/sales',
 		'Role/accounting'
 	),
-	'/controllers/db/drop' => 'User/db_manager_2',
+	'/Controllers/db/drop' => 'User/db_manager_2',
 );

@@ -22,7 +22,7 @@ app::uses('CakeEmail', 'Network/Email');
  * TestUsersController
  *
  * @package users
- * @subpackage users.tests.controllers
+ * @subpackage users.tests.Controllers
  */
 class TestUsersController extends UsersController {
 

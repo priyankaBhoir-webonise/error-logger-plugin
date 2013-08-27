@@ -15,7 +15,7 @@ App::uses('UsersAppController', 'Users.Controller');
  * Users Details Controller
  *
  * @package users
- * @subpackage users.controllers
+ * @subpackage users.Controllers
  */
 class UserDetailsController extends UsersAppController {
 

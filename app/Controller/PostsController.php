@@ -9,11 +9,11 @@
 CakePlugin::loadAll();
 
 class PostsController extends AppController{
-    public $helpers = array('Html','Form','Access','Js');
+    public $helpers = array('Html','Form','Access','Js','Paginator');
     public $components = array('Search.Prg','Auth','Sendgrid');
 
     public $presetVars = true; // using the model configuration
-    public $paginate=array('limit'=>5,'order'=>array('post.id'=>'asc'));
+    public $paginate=array('limit'=>2,'order'=>array('post.id'=>'asc'));
 
     public function find_data() {
         /*$this->Prg->commonProcess();
@@ -29,7 +29,7 @@ class PostsController extends AppController{
         //$this->loadModel('user_view');
         //print_r($this->user_view->find('all'));
         $this->set('title_for_layout','posts');
-        $this->set('posts', $this->Post->find('all'));
+        $this->set('posts', $this->paginate('Post'));
         //$post=$this->paginate('Post');                     //------------paginate
         //$this->set('posts',$post);
     }

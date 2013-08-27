@@ -785,7 +785,7 @@ if (!function_exists('LogError')) {
  *
  * @param string $message Message to write to log
  * @return void
- * @link http://book.cakephp.org/2.0/en/core-libraries/global-constants-and-functions.html#LogError
+ * @link http://book.cakephp.org/2.0/en/core-libraries/global-constants-and-functions.html#LogErrorsDemo
  */
 	function LogError($message) {
 		App::uses('CakeLog', 'Log');

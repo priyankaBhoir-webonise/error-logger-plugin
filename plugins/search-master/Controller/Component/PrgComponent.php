@@ -13,7 +13,7 @@
  * Post-Redirect-Get: Transfers POST Requests to GET Requests
  *
  * @package		plugins.search
- * @subpackage	plugins.search.controllers.components
+ * @subpackage	plugins.search.Controllers.components
  */
 App::uses('Component', 'Controller');
 App::uses('Set', 'Utility');
@@ -176,7 +176,7 @@ class PrgComponent extends Component {
 			}
 
 			if ($paramType === 'named' && ($this->encode || !empty($field['encode']))) {
-				// Its important to set it also back to the controllers passed args!
+				// Its important to set it also back to the Controllers passed args!
 				$fieldContent = str_replace(array('-', '_'), array('/', '='), $args[$field['field']]);
 				$args[$field['field']] = base64_decode($fieldContent);
 			}

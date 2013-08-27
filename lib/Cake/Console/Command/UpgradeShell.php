@@ -179,7 +179,7 @@ class UpgradeShell extends AppShell {
 		$sourceDirs = array(
 			'.' => array('recursive' => false),
 			'Console',
-			'controllers',
+			'Controllers',
 			'Controller',
 			'Lib' => array('checkFolder' => false),
 			'models',
@@ -350,7 +350,7 @@ class UpgradeShell extends AppShell {
  */
 	public function request() {
 		$views = array_diff(App::path('views'), App::core('views'));
-		$controllers = array_diff(App::path('controllers'), App::core('controllers'), array(APP));
+		$controllers = array_diff(App::path('Controllers'), App::core('Controllers'), array(APP));
 		$components = array_diff(App::path('components'), App::core('components'));
 
 		$this->_paths = array_merge($views, $controllers, $components);
@@ -358,8 +358,8 @@ class UpgradeShell extends AppShell {
 		if (!empty($this->params['plugin'])) {
 			$pluginPath = App::pluginPath($this->params['plugin']);
 			$this->_paths = array(
-				$pluginPath . 'controllers' . DS,
-				$pluginPath . 'controllers' . DS . 'components' . DS,
+				$pluginPath . 'Controllers' . DS,
+				$pluginPath . 'Controllers' . DS . 'components' . DS,
 				$pluginPath . 'views' . DS,
 			);
 		}
@@ -531,7 +531,7 @@ class UpgradeShell extends AppShell {
  * @return void
  */
 	public function exceptions() {
-		$controllers = array_diff(App::path('controllers'), App::core('controllers'), array(APP));
+		$controllers = array_diff(App::path('Controllers'), App::core('Controllers'), array(APP));
 		$components = array_diff(App::path('components'), App::core('components'));
 
 		$this->_paths = array_merge($controllers, $components);
@@ -539,8 +539,8 @@ class UpgradeShell extends AppShell {
 		if (!empty($this->params['plugin'])) {
 			$pluginPath = App::pluginPath($this->params['plugin']);
 			$this->_paths = array(
-				$pluginPath . 'controllers' . DS,
-				$pluginPath . 'controllers' . DS . 'components' . DS,
+				$pluginPath . 'Controllers' . DS,
+				$pluginPath . 'Controllers' . DS . 'components' . DS,
 			);
 		}
 		$patterns = array(
@@ -608,7 +608,7 @@ class UpgradeShell extends AppShell {
 	protected function _moveAppClasses() {
 		$files = array(
 			APP . 'app_controller.php' => APP . 'Controller' . DS . 'AppController.php',
-			APP . 'controllers' . DS . 'app_controller.php' => APP . 'Controller' . DS . 'AppController.php',
+			APP . 'Controllers' . DS . 'app_controller.php' => APP . 'Controller' . DS . 'AppController.php',
 			APP . 'app_model.php' => APP . 'Model' . DS . 'AppModel.php',
 			APP . 'models' . DS . 'app_model.php' => APP . 'Model' . DS . 'AppModel.php',
 		);

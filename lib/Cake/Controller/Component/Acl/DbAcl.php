@@ -25,12 +25,12 @@ App::uses('ClassRegistry', 'Utility');
  *
  * `$aco` and `$aro` parameters can be slash delimited paths to tree nodes.
  *
- * eg. `controllers/Users/edit`
+ * eg. `Controllers/Users/edit`
  *
  * Would point to a tree structure like
  *
  * {{{
- *	controllers
+ *	Controllers
  *		Users
  *			edit
  * }}}

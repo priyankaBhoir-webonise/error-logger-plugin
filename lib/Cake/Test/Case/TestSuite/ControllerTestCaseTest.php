@@ -272,7 +272,7 @@ class ControllerTestCaseTest extends CakeTestCase {
 	}
 
 /**
- * Make sure testAction() can hit plugin controllers.
+ * Make sure testAction() can hit plugin Controllers.
  *
  * @return void
  */
@@ -484,7 +484,7 @@ class ControllerTestCaseTest extends CakeTestCase {
 	}
 
 /**
- * Test that controllers don't get reused.
+ * Test that Controllers don't get reused.
  *
  * @return void
  */

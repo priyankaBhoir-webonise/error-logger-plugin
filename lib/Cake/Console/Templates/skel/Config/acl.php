@@ -29,7 +29,7 @@
  * 1. In your application you created a User model with the following properties:
  *    username, group_id, password, email, firstname, lastname and so on.
  * 2. You configured AuthComponent to authorize actions via
- *    $this->Auth->authorize = array('Actions' => array('actionPath' => 'controllers/'),...)
+ *    $this->Auth->authorize = array('Actions' => array('actionPath' => 'Controllers/'),...)
  *
  * Now, when a user (i.e. jeff) authenticates successfully and requests a controller action (i.e. /invoices/delete)
  * that is not allowed by default (e.g. via $this->Auth->allow('edit') in the Invoices controller) then AuthComponent
@@ -40,7 +40,7 @@
  *
  * as ARO and
  *
- *    '/controllers/invoices/delete'
+ *    '/Controllers/invoices/delete'
  *
  * as ACO.
  *
@@ -76,15 +76,15 @@
  *    $config['rules'] = array(
  *       'allow' => array(
  *       	'*' => 'Role/admin',
- *       	'controllers/users/(dashboard|profile)' => 'Role/default',
- *       	'controllers/invoices/*' => 'Role/accountant',
- *       	'controllers/articles/*' => 'Role/editor',
- *       	'controllers/users/*'  => 'Role/manager',
- *       	'controllers/invoices/delete'  => 'Role/manager',
+ *       	'Controllers/users/(dashboard|profile)' => 'Role/default',
+ *       	'Controllers/invoices/*' => 'Role/accountant',
+ *       	'Controllers/articles/*' => 'Role/editor',
+ *       	'Controllers/users/*'  => 'Role/manager',
+ *       	'Controllers/invoices/delete'  => 'Role/manager',
  *       ),
  *       'deny' => array(
- *       	'controllers/invoices/delete' => 'Role/accountant, User/jeff',
- *       	'controllers/articles/(delete|publish)' => 'Role/editor',
+ *       	'Controllers/invoices/delete' => 'Role/accountant, User/jeff',
+ *       	'Controllers/articles/(delete|publish)' => 'Role/editor',
  *       ),
  *    );
  *
@@ -92,8 +92,8 @@
  * Role/editor, Role/accountant and Role/default. However, for jeff, rules for User/jeff are more specific than
  * rules for Role/manager, rules for Role/manager are more specific than rules for Role/editor and so on.
  * This is important when allow and deny rules match for a role. E.g. Role/accountant is allowed
- * controllers/invoices/* but at the same time controllers/invoices/delete is denied. But there is a more
- * specific rule defined for Role/manager which is allowed controllers/invoices/delete. However, the most specific
+ * Controllers/invoices/* but at the same time Controllers/invoices/delete is denied. But there is a more
+ * specific rule defined for Role/manager which is allowed Controllers/invoices/delete. However, the most specific
  * rule denies access to the delete action explicitly for User/jeff, so he'll be denied access to the resource.
  *
  * If we would remove the role definition for User/jeff, then jeff would be granted access as he would be resolved

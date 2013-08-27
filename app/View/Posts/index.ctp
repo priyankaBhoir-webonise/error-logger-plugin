@@ -27,6 +27,9 @@
      echo '<script>'.$this->Js->each('$(this).css({color: "red"});').'</script>';
 ?>
 -->
+<?php echo $this->Paginator->numbers(array('first' => 'First page')); ?>
+
+
 <table>
     <tr>
         <th>Id</th>

@@ -359,7 +359,7 @@ class ProjectTaskTest extends CakeTestCase {
 
 		$this->Task->execute();
 		$this->assertTrue(is_dir($path), 'No project dir');
-		$this->assertTrue(is_dir($path . DS . 'Controller'), 'No controllers dir ');
+		$this->assertTrue(is_dir($path . DS . 'Controller'), 'No Controllers dir ');
 		$this->assertTrue(is_dir($path . DS . 'Controller' . DS . 'Component'), 'No components dir ');
 		$this->assertTrue(is_dir($path . DS . 'Model'), 'No models dir');
 		$this->assertTrue(is_dir($path . DS . 'View'), 'No views dir');

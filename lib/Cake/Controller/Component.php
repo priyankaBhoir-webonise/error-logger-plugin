@@ -37,7 +37,7 @@ App::uses('ComponentCollection', 'Controller');
  * - `beforeRedirect()` - Fired before a redirect() is done.
  *
  * @package       Cake.Controller
- * @link          http://book.cakephp.org/2.0/en/controllers/components.html
+ * @link          http://book.cakephp.org/2.0/en/Controllers/components.html
  * @see Controller::$components
  */
 class Component extends Object {
@@ -106,7 +106,7 @@ class Component extends Object {
  *
  * @param Controller $controller Controller with components to initialize
  * @return void
- * @link http://book.cakephp.org/2.0/en/controllers/components.html#Component::initialize
+ * @link http://book.cakephp.org/2.0/en/Controllers/components.html#Component::initialize
  */
 	public function initialize(Controller $controller) {
 	}
@@ -116,7 +116,7 @@ class Component extends Object {
  *
  * @param Controller $controller Controller with components to startup
  * @return void
- * @link http://book.cakephp.org/2.0/en/controllers/components.html#Component::startup
+ * @link http://book.cakephp.org/2.0/en/Controllers/components.html#Component::startup
  */
 	public function startup(Controller $controller) {
 	}
@@ -127,7 +127,7 @@ class Component extends Object {
  *
  * @param Controller $controller Controller with components to beforeRender
  * @return void
- * @link http://book.cakephp.org/2.0/en/controllers/components.html#Component::beforeRender
+ * @link http://book.cakephp.org/2.0/en/Controllers/components.html#Component::beforeRender
  */
 	public function beforeRender(Controller $controller) {
 	}
@@ -137,7 +137,7 @@ class Component extends Object {
  *
  * @param Controller $controller Controller with components to shutdown
  * @return void
- * @link http://book.cakephp.org/2.0/en/controllers/components.html#Component::shutdown
+ * @link http://book.cakephp.org/2.0/en/Controllers/components.html#Component::shutdown
  */
 	public function shutdown(Controller $controller) {
 	}
@@ -159,7 +159,7 @@ class Component extends Object {
  * @param integer $status The status code of the redirect
  * @param boolean $exit Will the script exit.
  * @return array|void Either an array or null.
- * @link http://book.cakephp.org/2.0/en/controllers/components.html#Component::beforeRedirect
+ * @link http://book.cakephp.org/2.0/en/Controllers/components.html#Component::beforeRedirect
  */
 	public function beforeRedirect(Controller $controller, $url, $status = null, $exit = true) {
 	}

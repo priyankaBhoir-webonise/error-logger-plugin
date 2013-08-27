@@ -23,7 +23,7 @@
 /**
  * Static content controller
  *
- * Override this controller by placing a copy in controllers directory of an application
+ * Override this controller by placing a copy in Controllers directory of an application
  *
  * @package       cake
  * @subpackage    cake.cake.libs.controller

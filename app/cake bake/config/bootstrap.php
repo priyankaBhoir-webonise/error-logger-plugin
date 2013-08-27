@@ -22,14 +22,14 @@
  */
 
 /**
- * The settings below can be used to set additional paths to models, views and controllers.
+ * The settings below can be used to set additional paths to models, views and Controllers.
  * This is related to Ticket #470 (https://trac.cakephp.org/ticket/470)
  *
  * App::build(array(
  *     'plugins' => array('/full/path/to/plugins/', '/next/full/path/to/plugins/'),
  *     'models' =>  array('/full/path/to/models/', '/next/full/path/to/models/'),
  *     'views' => array('/full/path/to/views/', '/next/full/path/to/views/'),
- *     'controllers' => array(/full/path/to/controllers/', '/next/full/path/to/controllers/'),
+ *     'Controllers' => array(/full/path/to/Controllers/', '/next/full/path/to/Controllers/'),
  *     'datasources' => array('/full/path/to/datasources/', '/next/full/path/to/datasources/'),
  *     'behaviors' => array('/full/path/to/behaviors/', '/next/full/path/to/behaviors/'),
  *     'components' => array('/full/path/to/components/', '/next/full/path/to/components/'),

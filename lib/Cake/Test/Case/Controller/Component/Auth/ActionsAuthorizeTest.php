@@ -43,7 +43,7 @@ class ActionsAuthorizeTest extends CakeTestCase {
 		$this->Collection = $this->getMock('ComponentCollection');
 
 		$this->auth = new ActionsAuthorize($this->Collection);
-		$this->auth->settings['actionPath'] = '/controllers';
+		$this->auth->settings['actionPath'] = '/Controllers';
 	}
 
 /**
@@ -81,7 +81,7 @@ class ActionsAuthorizeTest extends CakeTestCase {
 
 		$this->Acl->expects($this->once())
 			->method('check')
-			->with($user, 'controllers/Posts/index')
+			->with($user, 'Controllers/Posts/index')
 			->will($this->returnValue(false));
 
 		$this->assertFalse($this->auth->authorize($user['User'], $request));
@@ -110,7 +110,7 @@ class ActionsAuthorizeTest extends CakeTestCase {
 
 		$this->Acl->expects($this->once())
 			->method('check')
-			->with($user, 'controllers/Posts/index')
+			->with($user, 'Controllers/Posts/index')
 			->will($this->returnValue(true));
 
 		$this->assertTrue($this->auth->authorize($user['User'], $request));
@@ -140,7 +140,7 @@ class ActionsAuthorizeTest extends CakeTestCase {
 		$expected = array('TestPlugin.TestPluginAuthUser' => array('id' => 1, 'user' => 'mariano'));
 		$this->Acl->expects($this->once())
 			->method('check')
-			->with($expected, 'controllers/Posts/index')
+			->with($expected, 'Controllers/Posts/index')
 			->will($this->returnValue(true));
 
 		$this->assertTrue($this->auth->authorize($user, $request));
@@ -160,7 +160,7 @@ class ActionsAuthorizeTest extends CakeTestCase {
 		));
 
 		$result = $this->auth->action($request);
-		$this->assertEquals('controllers/Posts/index', $result);
+		$this->assertEquals('Controllers/Posts/index', $result);
 	}
 
 /**
@@ -169,7 +169,7 @@ class ActionsAuthorizeTest extends CakeTestCase {
  * @return void
  */
 	public function testActionNoDoubleSlash() {
-		$this->auth->settings['actionPath'] = '/controllers/';
+		$this->auth->settings['actionPath'] = '/Controllers/';
 		$request = new CakeRequest('/posts/index', false);
 		$request->addParams(array(
 			'plugin' => null,
@@ -177,7 +177,7 @@ class ActionsAuthorizeTest extends CakeTestCase {
 			'action' => 'index'
 		));
 		$result = $this->auth->action($request);
-		$this->assertEquals('controllers/Posts/index', $result);
+		$this->assertEquals('Controllers/Posts/index', $result);
 	}
 
 /**
@@ -194,6 +194,6 @@ class ActionsAuthorizeTest extends CakeTestCase {
 		));
 
 		$result = $this->auth->action($request);
-		$this->assertEquals('controllers/DebugKit/Posts/index', $result);
+		$this->assertEquals('Controllers/DebugKit/Posts/index', $result);
 	}
 }

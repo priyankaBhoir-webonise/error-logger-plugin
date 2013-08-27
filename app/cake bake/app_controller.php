@@ -24,7 +24,7 @@
 /**
  * Application Controller
  *
- * Add your application-wide methods in the class below, your controllers
+ * Add your application-wide methods in the class below, your Controllers
  * will inherit them.
  *
  * @package       cake

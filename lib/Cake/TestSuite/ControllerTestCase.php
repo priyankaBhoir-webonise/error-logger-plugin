@@ -119,7 +119,7 @@ abstract class ControllerTestCase extends CakeTestCase {
 	public $controller = null;
 
 /**
- * Automatically mock controllers that aren't mocked
+ * Automatically mock Controllers that aren't mocked
  *
  * @var boolean
  */
@@ -200,7 +200,7 @@ abstract class ControllerTestCase extends CakeTestCase {
  * - `data` Will be used as the request data. If the `method` is GET,
  *   data will be used a GET params. If the `method` is POST, it will be used
  *   as POST data. By setting `$options['data']` to a string, you can simulate XML or JSON
- *   payloads to your controllers allowing you to test REST webservices.
+ *   payloads to your Controllers allowing you to test REST webservices.
  * - `method` POST or GET. Defaults to POST.
  * - `return` Specify the return type you want. Choose from:
  *     - `vars` Get the set view variables.
@@ -304,7 +304,7 @@ abstract class ControllerTestCase extends CakeTestCase {
  * @param string $controller Controller name
  * @param array $mocks List of classes and methods to mock
  * @return Controller Mocked controller
- * @throws MissingControllerException When controllers could not be created.
+ * @throws MissingControllerException When Controllers could not be created.
  * @throws MissingComponentException When components could not be created.
  */
 	public function generate($controller, $mocks = array()) {

@@ -26,11 +26,11 @@ App::uses('CakeEmail', 'Network/Email');
 /**
  * Application Controller
  *
- * Add your application-wide methods in the class below, your controllers
+ * Add your application-wide methods in the class below, your Controllers
  * will inherit them.
  *
  * @package		app.Controller
- * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
+ * @link		http://book.cakephp.org/2.0/en/Controllers.html#the-app-controller
  */
 class AppController extends Controller {
     public function index(){
@@ -40,14 +40,14 @@ class AppController extends Controller {
     public $components = array(
         'Session',
         'Auth' => array(
-            'loginRedirect' => array('controller' => 'posts', 'action' => 'index'),
-            'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
+            'loginRedirect' => array('plugin'=>false,'controller' => 'posts', 'action' => 'index'),
+            'logoutRedirect' => array('plugin'=>false,'controller' => 'users', 'action' => 'login'),
             'authorize' => array('Controller')
         )
     );
 
     public function beforeFilter() {
-        $this->Auth->allow('index','view','logout');
+        $this->Auth->allow('index','view','logout','change');
     }
     public function isAuthorized($user) {
         // Admin can access every action

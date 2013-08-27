@@ -516,12 +516,12 @@ class AuthComponentTest extends CakeTestCase {
  */
 	public function testAllConfigWithAuthorize() {
 		$this->Controller->Auth->authorize = array(
-			AuthComponent::ALL => array('actionPath' => 'controllers/'),
+			AuthComponent::ALL => array('actionPath' => 'Controllers/'),
 			'Actions'
 		);
 		$objects = $this->Controller->Auth->constructAuthorize();
 		$result = $objects[0];
-		$this->assertEquals('controllers/', $result->settings['actionPath']);
+		$this->assertEquals('Controllers/', $result->settings['actionPath']);
 	}
 
 /**

@@ -514,7 +514,7 @@ class TestTaskTest extends CakeTestCase {
 	}
 
 /**
- * test Constructor generation ensure that constructClasses is called for controllers
+ * test Constructor generation ensure that constructClasses is called for Controllers
  *
  * @return void
  */

@@ -93,7 +93,7 @@ class UsersController extends UsersAppController {
  * Providing backward compatibility to a fix that was just made recently to the core
  * for users that want to upgrade the plugin but not the core
  *
- * @link http://cakephp.lighthouseapp.com/projects/42648-cakephp/tickets/3550-inherited-controllers-get-wrong-property-names
+ * @link http://cakephp.lighthouseapp.com/projects/42648-cakephp/tickets/3550-inherited-Controllers-get-wrong-property-names
  * @return void
  */
 	protected function _reInitControllerName() {

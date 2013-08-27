@@ -99,7 +99,7 @@ class AuthComponent extends Component {
  * {{{
  *	$this->Auth->authorize = array(
  *		'Crud' => array(
- *			'actionPath' => 'controllers/'
+ *			'actionPath' => 'Controllers/'
  *		)
  *	);
  * }}}
@@ -111,7 +111,7 @@ class AuthComponent extends Component {
  * {{{
  *	$this->Auth->authorize = array(
  *		'all' => array(
- *			'actionPath' => 'controllers/'
+ *			'actionPath' => 'Controllers/'
  *		),
  *		'Crud',
  *		'CustomAuth'

@@ -28,7 +28,7 @@
 Cache::config('default', array('engine' => 'File'));
 
 /**
- * The settings below can be used to set additional paths to models, views and controllers.
+ * The settings below can be used to set additional paths to models, views and Controllers.
  *
  * App::build(array(
  *     'Model'                     => array('/path/to/models/', '/next/path/to/models/'),
@@ -36,7 +36,7 @@ Cache::config('default', array('engine' => 'File'));
  *     'Model/Datasource'          => array('/path/to/datasources/', '/next/path/to/datasources/'),
  *     'Model/Datasource/Database' => array('/path/to/databases/', '/next/path/to/database/'),
  *     'Model/Datasource/Session'  => array('/path/to/sessions/', '/next/path/to/sessions/'),
- *     'Controller'                => array('/path/to/controllers/', '/next/path/to/controllers/'),
+ *     'Controller'                => array('/path/to/Controllers/', '/next/path/to/Controllers/'),
  *     'Controller/Component'      => array('/path/to/components/', '/next/path/to/components/'),
  *     'Controller/Component/Auth' => array('/path/to/auths/', '/next/path/to/auths/'),
  *     'Controller/Component/Acl'  => array('/path/to/acls/', '/next/path/to/acls/'),
@@ -76,7 +76,7 @@ Cache::config('default', array('engine' => 'File'));
  * You can attach event listeners to the request lifecycle as Dispatcher Filter . By Default CakePHP bundles two filters:
  *
  * - AssetDispatcher filter will serve your asset files (css, images, js, etc) from your themes and plugins
- * - CacheDispatcher filter will read the Cache.check configure variable and try to serve cached content generated from controllers
+ * - CacheDispatcher filter will read the Cache.check configure variable and try to serve cached content generated from Controllers
  *
  * Feel free to remove or add filters as you see fit for your application. A few examples:
  *

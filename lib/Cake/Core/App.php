@@ -26,7 +26,7 @@ App::uses('Inflector', 'Utility');
  * ### Adding paths
  *
  * You can add paths to the search indexes App uses to find classes using `App::build()`. Adding
- * additional controller paths for example would alter where CakePHP looks for controllers.
+ * additional controller paths for example would alter where CakePHP looks for Controllers.
  * This allows you to split your application up across the filesystem.
  *
  * ### Packages
@@ -58,7 +58,7 @@ App::uses('Inflector', 'Utility');
  * ### Inspecting known objects
  *
  * You can find out which objects App knows about using App::objects('Controller') for example to find
- * which application controllers App knows about.
+ * which application Controllers App knows about.
  *
  * @link          http://book.cakephp.org/2.0/en/core-utility-libraries/app.html
  * @package       Cake.Core
@@ -171,7 +171,7 @@ class App {
 		'models' => 'Model',
 		'behaviors' => 'Model/Behavior',
 		'datasources' => 'Model/Datasource',
-		'controllers' => 'Controller',
+		'Controllers' => 'Controller',
 		'components' => 'Controller/Component',
 		'views' => 'View',
 		'helpers' => 'View/Helper',

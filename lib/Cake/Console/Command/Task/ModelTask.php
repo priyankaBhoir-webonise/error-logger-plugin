@@ -828,7 +828,7 @@ class ModelTask extends BakeTask {
 	}
 
 /**
- * outputs the a list of possible models or controllers from database
+ * outputs the a list of possible models or Controllers from database
  *
  * @param string $useDbConfig Database configuration name
  * @return array

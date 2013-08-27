@@ -161,7 +161,7 @@ class ViewTask extends BakeTask {
 	}
 
 /**
- * Bake All views for All controllers.
+ * Bake All views for All Controllers.
  *
  * @return void
  */
@@ -438,12 +438,12 @@ class ViewTask extends BakeTask {
 			'short' => 'c',
 			'help' => __d('cake_console', 'The connection the connected model is on.')
 		))->addSubcommand('all', array(
-			'help' => __d('cake_console', 'Bake all CRUD action views for all controllers. Requires models and controllers to exist.')
+			'help' => __d('cake_console', 'Bake all CRUD action views for all Controllers. Requires models and Controllers to exist.')
 		))->epilog(__d('cake_console', 'Omitting all arguments and options will enter into an interactive mode.'));
 	}
 
 /**
- * Returns associations for controllers models.
+ * Returns associations for Controllers models.
  *
  * @param Model $model
  * @return array $associations

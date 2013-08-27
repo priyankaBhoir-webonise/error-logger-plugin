@@ -97,7 +97,7 @@ class ControllerTask extends BakeTask {
 	}
 
 /**
- * Bake All the controllers at once. Will only bake controllers for models that exist.
+ * Bake All the Controllers at once. Will only bake Controllers for models that exist.
  *
  * @return void
  */
@@ -401,10 +401,10 @@ class ControllerTask extends BakeTask {
 	}
 
 /**
- * Outputs and gets the list of possible controllers from database
+ * Outputs and gets the list of possible Controllers from database
  *
  * @param string $useDbConfig Database configuration name
- * @return array Set of controllers
+ * @return array Set of Controllers
  */
 	public function listAll($useDbConfig = null) {
 		if (is_null($useDbConfig)) {
@@ -467,7 +467,7 @@ class ControllerTask extends BakeTask {
 		return $parser->description(
 				__d('cake_console', 'Bake a controller for a model. Using options you can bake public, admin or both.')
 			)->addArgument('name', array(
-				'help' => __d('cake_console', 'Name of the controller to bake. Can use Plugin.name to bake controllers into plugins.')
+				'help' => __d('cake_console', 'Name of the controller to bake. Can use Plugin.name to bake Controllers into plugins.')
 			))->addOption('public', array(
 				'help' => __d('cake_console', 'Bake a controller with basic crud actions (index, view, add, edit, delete).'),
 				'boolean' => true
@@ -481,7 +481,7 @@ class ControllerTask extends BakeTask {
 				'short' => 'c',
 				'help' => __d('cake_console', 'The connection the controller\'s model is on.')
 			))->addSubcommand('all', array(
-				'help' => __d('cake_console', 'Bake all controllers with CRUD methods.')
+				'help' => __d('cake_console', 'Bake all Controllers with CRUD methods.')
 			))->epilog(__d('cake_console', 'Omitting all arguments and options will enter into an interactive mode.'));
 	}
 

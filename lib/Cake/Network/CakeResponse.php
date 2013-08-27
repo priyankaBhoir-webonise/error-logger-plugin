@@ -23,7 +23,7 @@ App::uses('File', 'Utility');
 /**
  * CakeResponse is responsible for managing the response text, status and headers of a HTTP response.
  *
- * By default controllers will use this class to render their response. If you are going to use
+ * By default Controllers will use this class to render their response. If you are going to use
  * a custom response class it should subclass this object in order to ensure compatibility.
  *
  * @package       Cake.Network

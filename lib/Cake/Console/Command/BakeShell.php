@@ -3,7 +3,7 @@
  * Command-line code generation utility to automate programmer chores.
  *
  * Bake is CakePHP's code generation script, which can help you kickstart
- * application development by writing fully functional skeleton controllers,
+ * application development by writing fully functional skeleton Controllers,
  * models, and views. Going further, Bake can also write Unit Tests for you.
  *
  * PHP 5
@@ -28,7 +28,7 @@ App::uses('Model', 'Model');
  * Command-line code generation utility to automate programmer chores.
  *
  * Bake is CakePHP's code generation script, which can help you kickstart
- * application development by writing fully functional skeleton controllers,
+ * application development by writing fully functional skeleton Controllers,
  * models, and views. Going further, Bake can also write Unit Tests for you.
  *
  * @package       Cake.Console.Command
@@ -209,7 +209,7 @@ class BakeShell extends AppShell {
 	public function getOptionParser() {
 		$parser = parent::getOptionParser();
 		return $parser->description(__d('cake_console',
-			'The Bake script generates controllers, views and models for your application.' .
+			'The Bake script generates Controllers, views and models for your application.' .
 			' If run with no command line arguments, Bake guides the user through the class creation process.' .
 			' You can customize the generation process by telling Bake where different parts of your application are using command line arguments.'
 		))->addSubcommand('all', array(
@@ -227,7 +227,7 @@ class BakeShell extends AppShell {
 			'help' => __d('cake_console', 'Bake a model.'),
 			'parser' => $this->Model->getOptionParser()
 		))->addSubcommand('view', array(
-			'help' => __d('cake_console', 'Bake views for controllers.'),
+			'help' => __d('cake_console', 'Bake views for Controllers.'),
 			'parser' => $this->View->getOptionParser()
 		))->addSubcommand('controller', array(
 			'help' => __d('cake_console', 'Bake a controller.'),

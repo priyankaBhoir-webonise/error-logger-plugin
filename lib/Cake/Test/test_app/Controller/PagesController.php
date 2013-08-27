@@ -25,10 +25,10 @@ App::uses('AppController', 'Controller');
 /**
  * Static content controller
  *
- * Override this controller by placing a copy in controllers directory of an application
+ * Override this controller by placing a copy in Controllers directory of an application
  *
  * @package       Cake.Controller
- * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
+ * @link http://book.cakephp.org/2.0/en/Controllers/pages-controller.html
  */
 class PagesController extends AppController {
 

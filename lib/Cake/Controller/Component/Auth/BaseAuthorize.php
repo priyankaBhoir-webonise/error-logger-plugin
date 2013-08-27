@@ -42,7 +42,7 @@ abstract class BaseAuthorize {
 /**
  * Settings for authorize objects.
  *
- * - `actionPath` - The path to ACO nodes that contains the nodes for controllers. Used as a prefix
+ * - `actionPath` - The path to ACO nodes that contains the nodes for Controllers. Used as a prefix
  *    when calling $this->action();
  * - `actionMap` - Action -> crud mappings. Used by authorization objects that want to map actions to CRUD roles.
  * - `userModel` - Model name that ARO records can be found under. Defaults to 'User'.

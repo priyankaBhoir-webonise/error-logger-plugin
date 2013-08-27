@@ -15,7 +15,7 @@ App::import('Controller', 'Users.UserDetails');
  * TestDetails
  *
  * @package users
- * @subpackage users.tests.controllers
+ * @subpackage users.tests.Controllers
  */
 class TestUserDetails extends UserDetailsController {
 	var $autoRender = false;
@@ -25,7 +25,7 @@ class TestUserDetails extends UserDetailsController {
  * DetailsController
  *
  * @package users
- * @author users.tests.controllers
+ * @author users.tests.Controllers
  */
 class UserDetailsControllerTest extends CakeTestCase {
 	var $Details = null;

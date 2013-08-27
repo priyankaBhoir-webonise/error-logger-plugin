@@ -51,7 +51,7 @@ class JsonView extends View {
 
 /**
  * JSON views are always located in the 'json' sub directory for a
- * controllers views.
+ * Controllers views.
  *
  * @var string
  */

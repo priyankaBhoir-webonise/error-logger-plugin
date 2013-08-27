@@ -413,7 +413,7 @@ class Scaffold {
 	}
 
 /**
- * Returns associations for controllers models.
+ * Returns associations for Controllers models.
  *
  * @return array Associations for model
  */

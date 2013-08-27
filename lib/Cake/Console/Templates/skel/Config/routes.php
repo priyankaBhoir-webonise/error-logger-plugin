@@ -2,9 +2,9 @@
 /**
  * Routes configuration
  *
- * In this file, you set up routes to your controllers and their actions.
+ * In this file, you set up routes to your Controllers and their actions.
  * Routes are very important mechanism that allows you to freely connect
- * different URLs to chosen controllers and their actions (functions).
+ * different URLs to chosen Controllers and their actions (functions).
  *
  * PHP 5
  *

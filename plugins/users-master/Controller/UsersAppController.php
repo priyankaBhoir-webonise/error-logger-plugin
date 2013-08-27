@@ -13,7 +13,7 @@
  * Users App Controller
  *
  * @package users
- * @subpackage users.controllers
+ * @subpackage users.Controllers
  */
 
 App::uses('AppController', 'Controller');

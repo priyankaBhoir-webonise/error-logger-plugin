@@ -11,7 +11,9 @@ require '/home/webonise/projects/php/apps2013/cakephp/vendor/Swift-5.0.1/lib/swi
 
 class ErrorLogsController extends LogErrorsAppController
 {
-
+    public $paginate = array(
+        'limit' => 2,
+    );
     function addLog($data){
         $this->ErrorLog->create();
         $result=$this->ErrorLog->save($data);
@@ -36,7 +38,8 @@ class ErrorLogsController extends LogErrorsAppController
         $this->ErrorLog->save($data);
     }
     function index(){
-        $errors=$this->ErrorLog->find('all');
+        $errors=$this->ErrorLog->find('first');
+//        $errors=$this->paginate();
         $this->autoRender=true;
         $this->set('errors',$errors);
     }
