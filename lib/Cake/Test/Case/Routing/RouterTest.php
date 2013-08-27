@@ -423,8 +423,8 @@ class RouterTest extends CakeTestCase {
 		Router::connect('/page/*', array('plugin' => null, 'controller' => 'pages', 'action' => 'view'));
 		Router::parse('/');
 
-		$result = Router::url(array('plugin' => 'my_plugin', 'controller' => 'pages', 'action' => 'view', 'my-page'));
-		$expected = '/my_plugin/pages/view/my-page';
+		$result = Router::url(array('plugin' => 'people', 'controller' => 'pages', 'action' => 'view', 'my-page'));
+		$expected = '/people/pages/view/my-page';
 		$this->assertEquals($expected, $result);
 
 		Router::reload();

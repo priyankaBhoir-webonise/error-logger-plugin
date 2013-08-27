@@ -112,3 +112,32 @@ CakePlugin::load('search',array(
     'search' => array('bootstrap' => true),
     'WebmasterTools' => array('bootstrap' => true, 'routes' => true),
 ));
+CakePlugin::load('log-error');
+App::uses('ErrorCheck','log-error.libs');
+
+/*
+ * airbrake configs
+ *
+ */
+//CakePlugin::load('Airbrake-Cake');
+//Configure::write('Airbrake-Cake.apiKey', '0fe5a382cc8dacb1083ec2f926f07eeb');
+//App::uses('AirbrakeError', 'Airbrake-Cake.Lib');
+//Configure::write('Airbrake-Cake.options',array('async'=>true));
+    /*
+     * options available
+     *
+    - **timeout** - Defaults to 2, this is how long the service will wait before giving up. This should be set to a sane limit, so as to avoid excessive page times in the event of a failure.
+    - **environmentName** - Defaults to 'production'. This can be changed to match the environment that you are working, which will help prevent messy logs, filled with non-production problems.
+    - **serverData** - This defaults to the $_SERVER array, but can be overridden with any array of data.
+    - **getData** - Defaults to the $_GET array
+    - **postData** - Defaults to the $_POST array
+    - **sessionData** - Defaults to the $_SESSION array
+    - **component** - This is the name of the component or controller that is running.
+    - **action** - The name of the action that was called.
+    - **projectRoot** - Defaults to the Document Root. May need to change based on the context of your application.
+    - **url** - The main URL that was requested.
+    - **hostname** - The hostname that was requested.
+    - **queue** - Optional - the name of the Resque queue to use.
+    - **filters** - Optional - A list of errors to ignore
+    - **async**   - Optional - Will asynchronously send exceptions if true
+*/

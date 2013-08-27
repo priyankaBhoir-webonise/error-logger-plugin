@@ -107,7 +107,7 @@ class SessionHelper extends AppHelper {
  * {{{
  * echo $this->Session->flash('flash', array(
  *		'element' => 'my_custom_element',
- *		'params' => array('plugin' => 'my_plugin')
+ *		'params' => array('plugin' => 'people')
  * ));
  * }}}
  *

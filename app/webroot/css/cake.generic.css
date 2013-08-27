@@ -109,7 +109,12 @@ p {
 	padding: 6px 10px;
 	text-align: right;
 }
-
+#sidebar{
+    float: right;
+}
+#searchbox{
+    float: left;
+}
 /** containers **/
 div.form,
 div.index,

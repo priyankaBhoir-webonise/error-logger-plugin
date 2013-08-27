@@ -110,7 +110,11 @@ p {
 	padding: 6px 10px;
 	text-align: right;
 }
-
+#sidebar{
+   float: right;
+    background-color: #99FF99;
+    margin: 100px;
+}
 /** containers **/
 div.form,
 div.index,

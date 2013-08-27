@@ -2343,28 +2343,28 @@ class PaginatorHelperTest extends CakeTestCase {
 		Router::setRequestInfo(array(
 			array(
 				'pass' => array(), 'named' => array(), 'prefix' => null, 'form' => array(),
-				'controller' => 'magazines', 'plugin' => 'my_plugin', 'action' => 'index',
-				'url' => array('ext' => 'html', 'url' => 'my_plugin/magazines')),
-			array('base' => '', 'here' => '/my_plugin/magazines', 'webroot' => '/')
+				'controller' => 'magazines', 'plugin' => 'people', 'action' => 'index',
+				'url' => array('ext' => 'html', 'url' => 'people/magazines')),
+			array('base' => '', 'here' => '/people/magazines', 'webroot' => '/')
 		));
 
 		$result = $this->Paginator->link('Page 3', array('page' => 3));
 		$expected = array(
-			'a' => array('href' => '/my_plugin/magazines/index/page:3'), 'Page 3', '/a'
+			'a' => array('href' => '/people/magazines/index/page:3'), 'Page 3', '/a'
 		);
 		$this->assertTags($result, $expected);
 
 		$this->Paginator->options(array('url' => array('action' => 'another_index')));
 		$result = $this->Paginator->link('Page 3', array('page' => 3));
 		$expected = array(
-			'a' => array('href' => '/my_plugin/magazines/another_index/page:3'), 'Page 3', '/a'
+			'a' => array('href' => '/people/magazines/another_index/page:3'), 'Page 3', '/a'
 		);
 		$this->assertTags($result, $expected);
 
 		$this->Paginator->options(array('url' => array('controller' => 'issues')));
 		$result = $this->Paginator->link('Page 3', array('page' => 3));
 		$expected = array(
-			'a' => array('href' => '/my_plugin/issues/index/page:3'), 'Page 3', '/a'
+			'a' => array('href' => '/people/issues/index/page:3'), 'Page 3', '/a'
 		);
 		$this->assertTags($result, $expected);
 

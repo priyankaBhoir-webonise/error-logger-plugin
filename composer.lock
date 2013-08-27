@@ -1,0 +1,69 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "543443dd455dbc0238cbd821d51c989e",
+    "packages": [
+        {
+            "name": "airbrake/airbrake-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/airbrake/airbrake-php.git",
+                "reference": "1f147386f5174012f49e4be2f37e258b254f578b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/airbrake/airbrake-php/zipball/1f147386f5174012f49e4be2f37e258b254f578b",
+                "reference": "1f147386f5174012f49e4be2f37e258b254f578b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Airbrake": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Airbrake",
+                    "email": "support@airbrake.io",
+                    "homepage": "http://airbrake.io"
+                }
+            ],
+            "description": "A PHP 5.3 library for sending errors to the Airbrake.io service.",
+            "homepage": "https://github.com/airbrake/airbrake-php",
+            "keywords": [
+                "airbrake",
+                "errors",
+                "exceptions",
+                "logging"
+            ],
+            "time": "2012-10-12 19:07:41"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "airbrake/airbrake-php": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

@@ -346,3 +346,37 @@ Cache::config('_cake_model_', array(
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
+/*
+ * configuration for airbrake
+ *
+ */
+//Configure::write('Error', array(
+//    'handler' => 'AirbrakeError::handleError',
+//    'level' => E_ALL & ~E_DEPRECATED,
+//    'trace' => true
+//));
+//
+//Configure::write('Exception', array(
+//    'handler' => 'AirbrakeError::handleException',
+//    'renderer' => 'ExceptionRenderer',
+//    'log' => true
+//));
+
+/*
+ * configurations for error_log
+ */
+Configure::write('Error', array(
+    'handler' => 'ErrorCheck::onError',
+    'level' => E_ALL & ~E_DEPRECATED,
+    'trace' => true
+));
+
+Configure::write('Exception', array(
+    'handler' => 'ErrorCheck::onException',
+    'renderer' => 'ExceptionRenderer',
+    'log' => true
+));
+
+//Configure::write('Sendgrid.username', 'kvijay');
+//Configure::write('Sendgrid.password', 'vijay6186');
+

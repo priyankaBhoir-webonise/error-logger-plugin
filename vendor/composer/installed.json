@@ -1,0 +1,48 @@
+[
+    {
+        "name": "airbrake/airbrake-php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/airbrake/airbrake-php.git",
+            "reference": "1f147386f5174012f49e4be2f37e258b254f578b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/airbrake/airbrake-php/zipball/1f147386f5174012f49e4be2f37e258b254f578b",
+            "reference": "1f147386f5174012f49e4be2f37e258b254f578b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.1"
+        },
+        "time": "2012-10-12 19:07:41",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Airbrake": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Airbrake",
+                "email": "support@airbrake.io",
+                "homepage": "http://airbrake.io"
+            }
+        ],
+        "description": "A PHP 5.3 library for sending errors to the Airbrake.io service.",
+        "homepage": "https://github.com/airbrake/airbrake-php",
+        "keywords": [
+            "airbrake",
+            "errors",
+            "exceptions",
+            "logging"
+        ]
+    }
+]
