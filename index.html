@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Error-logger-plugin : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Error-logger-plugin</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/priyankaBhoir-webonise/error-logger-plugin">View on GitHub</a>
+
+          <h1 id="project_title">Error-logger-plugin</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/priyankaBhoir-webonise/error-logger-plugin/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/priyankaBhoir-webonise/error-logger-plugin/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="error-logger-plugin" class="anchor" href="#error-logger-plugin"><span class="octicon octicon-link"></span></a>error-logger-plugin</h1>
+
+<h1>
+<a name="configurations-" class="anchor" href="#configurations-"><span class="octicon octicon-link"></span></a>Configurations </h1>
+
+<p>Add following lines in app/Config/bootstrap.php</p>
+
+<pre><code>CakePlugin::load('LogErrors');
+App::uses('ErrorCheck','LogErrors.Lib');
+</code></pre>
+
+<p>Add following lines in app/Config/core.php</p>
+
+<pre><code>Configure::write('Error', array(
+    'handler' =&gt; 'ErrorCheck::onError',
+    'level' =&gt; E_ALL &amp; ~E_DEPRECATED,
+    'trace' =&gt; true
+));
+
+Configure::write('Exception', array(
+    'handler' =&gt; 'ErrorCheck::onException',
+    'renderer' =&gt; 'ExceptionRenderer',
+    'log' =&gt; true
+));
+</code></pre>
+
+<p>optional configuration to add in the core.php</p>
+
+<pre><code>Configure::write('Error_log_file','path/to/log file');
+Configure::write('Email_id','user@example.com');
+</code></pre>
+
+<p>-- Email_id in the configurations should be valid email id to which all errors will be reported(mailed)</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Error-logger-plugin maintained by <a href="https://github.com/priyankaBhoir-webonise">priyankaBhoir-webonise</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
