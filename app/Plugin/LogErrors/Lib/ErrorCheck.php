@@ -27,6 +27,7 @@ class ErrorCheck extends ErrorHandler{
     function addErrorLog($data){
         $serverData=array('HTTP_HOST','HTTP_USER_AGENT','HTTP_COOKIE','REMOTE_ADDR','REQUEST_METHOD','QUERY_STRING','REQUEST_URI','REQUEST_TIME');
         $errorLog= ErrorCheck::getLog();
+        $data['session_data']='';
         if(!empty($_SESSION)){
             $data['session_data']=print_r($_SESSION,true);
         }
@@ -47,6 +48,9 @@ class ErrorCheck extends ErrorHandler{
             $err_file=Configure::read('Error_log_file');
         }else{
             $err_file=APP.'tmp'.DS.'logs'.DS.'custom-error.log';
+        }
+        if(empty($message)){
+            $message='Undefined error';
         }
         error_log("Error:$message  type:$type \nstack: \n",3,$err_file);
 
@@ -81,7 +85,7 @@ class ErrorCheck extends ErrorHandler{
             }
         }
 
-        $data=array('err_message'=>$e->getMessage(),'err_type'=>$e->getCode(),'err_stack'=>$error_message);
+        $data=array('error_message'=>$e->getMessage(),'error_type'=>$e->getCode(),'error_stack'=>$error_message);
         self::$instance->addErrorLog($data);
 
         parent::handleException($e);

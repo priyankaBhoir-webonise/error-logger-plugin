@@ -17,7 +17,6 @@
  * @since         CakePHP(tm) v 2.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
 App::uses('CakeSession', 'Model/Datasource');
 App::uses('CacheSession', 'Model/Datasource/Session');
 class_exists('CakeSession');

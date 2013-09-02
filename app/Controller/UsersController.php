@@ -9,6 +9,8 @@
 CakePlugin::loadAll();
 class UsersController extends AppController {
 
+    public $helpers=array('Paginator');
+    public $paginate=array('limit'=>10,'order'=>array('created'=>'desc'));
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('add');

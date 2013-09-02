@@ -69,7 +69,7 @@ class TestItController extends AppController{
 
     public function index(){
 //        $_SESSION['name']='priyanka';
-        $res=5/0;
+          $res=5/0;
 ////        include('abcd.txt');
 //        //throw new Exception('exception demo');
 //        $this->autoRender=false;

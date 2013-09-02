@@ -1,5 +1,5 @@
-<?php echo $this->Html->link('change_status',
-    array('controller' => 'ErrorLogs', 'action' => 'change',$error['ErrorLog']['id']));?>
+<?if(!empty($error)){
+    ?>
 <table>
     <tr>
         <td><?php echo '<b>'.$error['ErrorLog']['error_message'].'</b>'; ?>
@@ -36,3 +36,4 @@
             Server Data:<br><?php echo nl2br($error['ErrorLog']['server_data']);?>
         </td>
     </tr>
+    <?php } ?>

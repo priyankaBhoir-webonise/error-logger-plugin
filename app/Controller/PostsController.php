@@ -13,7 +13,7 @@ class PostsController extends AppController{
     public $components = array('Search.Prg','Auth','Sendgrid');
 
     public $presetVars = true; // using the model configuration
-    public $paginate=array('limit'=>2,'order'=>array('post.id'=>'asc'));
+    public $paginate=array('limit'=>5,'order'=>array('post.id'=>'asc'));
 
     public function find_data() {
         /*$this->Prg->commonProcess();
@@ -29,7 +29,8 @@ class PostsController extends AppController{
         //$this->loadModel('user_view');
         //print_r($this->user_view->find('all'));
         $this->set('title_for_layout','posts');
-        $this->set('posts', $this->paginate('Post'));
+        $posts=$this->paginate('Post');
+        $this->set('posts', $posts);
         //$post=$this->paginate('Post');                     //------------paginate
         //$this->set('posts',$post);
     }
@@ -38,7 +39,11 @@ class PostsController extends AppController{
         if (!$id) {
             throw new NotFoundException(__('Invalid post'));
         }
-        $post = $this->Post->findById($id);
+//        $post=Cache::read('Post'.$id);
+//        if(empty($post)){
+            $post = $this->Post->customFind('first',array('conditions'=>array('Post.id'=>$id)));
+//            Cache::write('Post'.$id,$post);
+//        }
         if (!$post) {
             throw new NotFoundException(__('Invalid post'));
         }
@@ -59,13 +64,6 @@ class PostsController extends AppController{
                 )));
                 $this->Session->setFlash('Your post has been saved.');
 
-                $this->Sendgrid->delivery = 'sendgrid';
-                $this->Sendgrid->from = 'priyanka.bhoir@weboniselab.com';
-                $this->Sendgrid->to = 'priyanka.bhoir@weboniselab.com';
-                $this->Sendgrid->subject = 'this is the subject';
-                $messageBody = 'this is the message body';
-                $this->Sendgrid->send($messageBody);
-
                 $this->redirect(array('action' => 'index'));
             }
             else {
@@ -79,8 +77,7 @@ class PostsController extends AppController{
             throw new NotFoundException(__('Invalid post'));
         }
 
-        $post=$this->Post->find('first',
-                                array('conditions'=>array('id'=>$id)));
+        $post=$this->Post->customFind('first',array('conditions'=>array('Post.id'=>$id)),true);
 
         if (!$post) {
             throw new NotFoundException(__('Invalid post'));
@@ -104,7 +101,7 @@ class PostsController extends AppController{
         if ($this->request->is('get')) {
             throw new MethodNotAllowedException();
         }
-        if ($this->Post->delete($id)) {
+        if ($this->Post->customDelete($id)) {
         $this->Session->setFlash('The post with id: ' . $id . ' has been deleted.');
         $this->redirect(array('action' => 'index'));
         }

@@ -1,8 +1,11 @@
+
 <?php echo $this->Html->link('Resolved',
     array('controller' => 'ErrorLogs', 'action' => 'index', 1)); ?>
 
 <?php echo $this->Html->link('UnResolved',
     array('controller' => 'ErrorLogs', 'action' => 'index', 0)); ?>
+<br>
+<?php echo $this->Paginator->numbers(array('first' => 'First page')); ?>
 <table border="1">
 <?php
 if(!empty($errors)){

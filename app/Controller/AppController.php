@@ -47,7 +47,7 @@ class AppController extends Controller {
     );
 
     public function beforeFilter() {
-        $this->Auth->allow('index','view','logout','change');
+        $this->Auth->allow('index','view','logout','change','cache');
     }
     public function isAuthorized($user) {
         // Admin can access every action

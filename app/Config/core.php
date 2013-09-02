@@ -301,7 +301,15 @@
  *		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
  *	));
  */
-
+Cache::config('default', array(
+ 		'engine' => 'Memcache', //[required]
+  		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
+ 		'servers' => array(
+ 			'127.0.0.1:11211' // localhost, default port 11211
+   		), //[optional]
+ 		'persistent' => true, // [optional] set this to false for non-persistent connections
+ 		'compress' => false, // [optional] compress data in Memcache (slower, but uses less memory)
+ 	));
 /**
  * Configure the cache handlers that CakePHP will use for internal
  * metadata like class maps, and model schema.
