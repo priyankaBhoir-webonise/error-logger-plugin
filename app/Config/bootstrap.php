@@ -115,6 +115,15 @@ CakePlugin::load('search',array(
 CakePlugin::load('LogErrors');
 App::uses('ErrorCheck','LogErrors.Lib');
 
+CakePlugin::load('Combinator');
+//CakePlugin::load('MinifyHtml');
+
+//Configure::write('Dispatcher.filters', array(
+//    'AssetDispatcher',
+//    'CacheDispatcher'
+//));
+//CakePlugin::load('AssetCompress', array('bootstrap' => true));
+//App::uses('Combinator','Combinator.View.Helper');
 /*
  * airbrake configs
  *
@@ -145,4 +154,5 @@ CakePlugin::load('Examples', array('bootstrap' => false, 'routes' => false));
 
 CakePlugin::load('Examples1', array('bootstrap' => false, 'routes' => false));
 
+//CakePlugin::load('Combinator');
 //CakePlugin::load('LogErrors', array('bootstrap' => false, 'routes' => false));

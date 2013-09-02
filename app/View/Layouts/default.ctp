@@ -22,6 +22,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <!DOCTYPE html>
 <html>
 <head>
+    <?php
+
+    $this->Combinator->add_libs('js', array('jquery.1.3.2'));
+    $this->Combinator->add_libs('css', array('bootstrap','main'));
+
+    echo $this->Combinator->scripts('js'); // Output Javascript files
+    echo $this->Combinator->scripts('css'); // Output CSS files
+
+    ?>
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php //echo $cakeDescription ?>:
@@ -61,6 +70,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			?>
 		</div>
 	</div>
-	<?php //echo $this->element('sql_dump'); ?>
+	<?php echo $this->element('sql_dump');
+    echo $this->MinifyHtml->afterLayout();?>
 </body>
 </html>

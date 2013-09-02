@@ -33,6 +33,7 @@ App::uses('CakeEmail', 'Network/Email');
  * @link		http://book.cakephp.org/2.0/en/Controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    public $helpers=array('Combinator.Combinator');//'AssetCompress.AssetCompress')'MinifyHtml.MinifyHtml');
     public function index(){
 
     }

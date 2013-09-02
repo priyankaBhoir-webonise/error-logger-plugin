@@ -14,7 +14,7 @@
       echo $this->Form->end('google search');
 ?>
 </div>
-<p id='first'>it is para</p>
+
 <!-- using Jshelper <?php
     echo '<script>'.$this->Js->alert('hello');
     $this->Js->get('#first');
