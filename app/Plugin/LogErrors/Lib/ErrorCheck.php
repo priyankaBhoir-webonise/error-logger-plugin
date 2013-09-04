@@ -52,7 +52,8 @@ class ErrorCheck extends ErrorHandler{
         if(empty($message)){
             $message='Undefined error';
         }
-        error_log("Error:$message  type:$type \nstack: \n",3,$err_file);
+        list($errorType,$log)=parent::mapErrorCode($type);
+        error_log("Error:$message  type:$errorType \nstack: \n",3,$err_file);
 
         $backtrace=debug_backtrace();
         $error_message='';
@@ -62,7 +63,7 @@ class ErrorCheck extends ErrorHandler{
            }
         }
         error_log($error_message,3,$err_file);
-        $data=array('error_message'=>$message,'error_type'=>$type,'error_stack'=>$error_message);
+        $data=array('error_message'=>$message,'error_type'=>$errorType,'error_stack'=>$error_message);
         self::$instance->addErrorLog($data);
 
         parent::handleError($type, $message, $file, $line, $context);
@@ -75,7 +76,7 @@ class ErrorCheck extends ErrorHandler{
         }else{
             $err_file=APP.'tmp'.DS.'logs'.DS.'custom-error.log';
         }
-        error_log("\nError:".$e->getMessage()."  code:".$e->getCode()." \n",3,$err_file);
+        error_log("\nError:".$e->getMessage()."  code:".get_class($e)." \n",3,$err_file);
         $backtrace=debug_backtrace();
         $error_message='';
         foreach($backtrace as $trace){
@@ -85,7 +86,7 @@ class ErrorCheck extends ErrorHandler{
             }
         }
 
-        $data=array('error_message'=>$e->getMessage(),'error_type'=>$e->getCode(),'error_stack'=>$error_message);
+        $data=array('error_message'=>$e->getMessage(),'error_type'=>get_class($e),'error_stack'=>$error_message);
         self::$instance->addErrorLog($data);
 
         parent::handleException($e);

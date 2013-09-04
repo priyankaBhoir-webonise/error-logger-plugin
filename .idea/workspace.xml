@@ -2,16 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e99af69e-5692-4ede-9b96-d7f8be64608a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Plugin/Combinator" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Controller/ManifierController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Console/Command/SendMailShell.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Console/Command/Task/FetchDataTask.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/View/Helper/CustomCombinatorHelper.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Plugin/AssetCompress/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Plugin/Combinator1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/cache-css/cache-0-879a142e78394f55bdd92d743a4ac436.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/cache-css/cache-1376292338-04f553dd80b9ee763e6f67c6eb434390.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/cache-js/cache-0-c120b9717ea74f0ba9e4d71d04eea09a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/cache-js/cache-1297499488-483d0bd1591f2a43cd96f303c7eb45b3.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/new.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/new2.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Layouts/default.ctp" afterPath="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Posts/index.ctp" afterPath="$PROJECT_DIR$/app/View/Posts/index.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Config/bootstrap.php" afterPath="$PROJECT_DIR$/app/Config/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitmodules" afterPath="$PROJECT_DIR$/.gitmodules" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/PostsController.php" afterPath="$PROJECT_DIR$/app/Controller/PostsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Config/core.php" afterPath="$PROJECT_DIR$/app/Config/core.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/AppController.php" afterPath="$PROJECT_DIR$/app/Controller/AppController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Plugin/LogErrors/Controller/ErrorLogsController.php" afterPath="$PROJECT_DIR$/app/Plugin/LogErrors/Controller/ErrorLogsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Plugin/LogErrors/Lib/ErrorCheck.php" afterPath="$PROJECT_DIR$/app/Plugin/LogErrors/Lib/ErrorCheck.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Plugin/LogErrors/Model/ErrorLog.php" afterPath="$PROJECT_DIR$/app/Plugin/LogErrors/Model/ErrorLog.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Plugin/LogErrors/View/ErrorLogs/view.ctp" afterPath="$PROJECT_DIR$/app/Plugin/LogErrors/View/ErrorLogs/view.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Layouts/default.ctp" afterPath="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.php" afterPath="$PROJECT_DIR$/app/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webroot/index.php" afterPath="$PROJECT_DIR$/app/webroot/index.php" />
     </list>
     <ignored path="cakephp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,28 +63,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cachingBehavior.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Behavior/cachingBehavior.php">
+      <file leaf-file-name="view.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Plugin/LogErrors/View/ErrorLogs/view.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="9" selection-start="1838" selection-end="1838" vertical-scroll-proportion="-0.625">
+            <state line="10" column="61" selection-start="409" selection-end="409" vertical-scroll-proportion="-6.25">
+              <folding>
+                <marker date="1378286675058" expanded="false" signature="564:576" placeholder="..." />
+                <marker date="1378286675058" expanded="false" signature="660:670" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Layouts/error.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Config/bootstrap.php">
+      <file leaf-file-name="CombinatorHelper.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Plugin/Combinator/View/Helper/CombinatorHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="33" selection-start="5505" selection-end="5505" vertical-scroll-proportion="0.0">
+            <state line="87" column="53" selection-start="3607" selection-end="3607" vertical-scroll-proportion="-9.375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.ctp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
+      <file leaf-file-name="SendMailShell.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Console/Command/SendMailShell.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="12" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.2847222">
+            <state line="9" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.19368723">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="standard_2.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="617" column="24" selection-start="18551" selection-end="18564" vertical-scroll-proportion="-3.8333333">
               <folding />
             </state>
           </provider>
@@ -95,21 +127,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/Model/AppModel.php" />
-        <option value="$PROJECT_DIR$/lib/Cake/Routing/Dispatcher.php" />
-        <option value="$PROJECT_DIR$/app/Plugin/LogErrors/Controller/ErrorLogsController.php" />
-        <option value="$PROJECT_DIR$/app/Model/Behavior/cachingBehavior.php" />
-        <option value="$PROJECT_DIR$/app/View/Posts/index.ctp" />
-        <option value="$PROJECT_DIR$/app/Model/Post.php" />
-        <option value="$PROJECT_DIR$/app/Config/core.php" />
-        <option value="$PROJECT_DIR$/app/Controller/Manifier.php" />
-        <option value="$PROJECT_DIR$/min/config.php" />
-        <option value="$PROJECT_DIR$/app/Controller/ManifierController.php" />
-        <option value="$PROJECT_DIR$/app/Plugin/Combinator/Vendor/cssmin/cssmin.php" />
-        <option value="$PROJECT_DIR$/app/Controller/PostsController.php" />
         <option value="$PROJECT_DIR$/app/Plugin/MinifyHtml/View/Helper/MinifyHtmlHelper.php" />
+        <option value="$PROJECT_DIR$/app/webroot/css/cake.generic.css" />
+        <option value="$PROJECT_DIR$/app/Config/core.php" />
         <option value="$PROJECT_DIR$/app/Config/bootstrap.php" />
         <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
+        <option value="$PROJECT_DIR$/app/Plugin/LogErrors/View/ErrorLogs/view.ctp" />
+        <option value="$PROJECT_DIR$/app/index.php" />
+        <option value="$PROJECT_DIR$/app/webroot/index.php" />
+        <option value="$PROJECT_DIR$/app/Plugin/LogErrors/Controller/ErrorLogsController.php" />
+        <option value="$PROJECT_DIR$/app/Plugin/LogErrors/Model/ErrorLog.php" />
+        <option value="$PROJECT_DIR$/app/Plugin/LogErrors/Lib/ErrorCheck.php" />
+        <option value="$PROJECT_DIR$/app/Plugin/Combinator/View/Helper/CombinatorHelper.php" />
+        <option value="$PROJECT_DIR$/app/Console/Command/Task/FetchDataTask.php" />
+        <option value="$PROJECT_DIR$/app/View/Helper/CustomCombinatorHelper.php" />
+        <option value="$PROJECT_DIR$/app/Console/Command/SendMailShell.php" />
         <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
       </list>
     </option>
@@ -199,6 +231,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cache-css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="View" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -217,7 +311,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Plugin" />
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cakephp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Helper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -327,12 +447,12 @@
     <frame x="1412" y="-4" width="1549" height="905" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5453333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5453333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299933" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28390113" sideWeight="0.45466667" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21548387" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29124916" sideWeight="0.45466667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.588" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.058666665" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -402,100 +522,130 @@
           <url>file://$PROJECT_DIR$/lib/Cake/Network/Email/CakeEmail.php</url>
           <line>1097</line>
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/lib/Cake/Error/ErrorHandler.php</url>
-          <line>201</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="70" />
+      <option name="time" value="84" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Controller/ManifierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="473" selection-end="473" vertical-scroll-proportion="0.40889525" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Plugin/Combinator/README.markdown">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Plugin/Combinator/View/Helper/CombinatorHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="23" selection-start="6408" selection-end="6408" vertical-scroll-proportion="-0.5" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/cache-css/cache-0-879a142e78394f55bdd92d743a4ac436.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/cache-css/cache-1376292338-04f553dd80b9ee763e6f67c6eb434390.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/cache-js/cache-1297499488-483d0bd1591f2a43cd96f303c7eb45b3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Plugin/LogErrors/Controller/ErrorLogsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="2617" selection-end="2661" vertical-scroll-proportion="0.4115899" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Plugin/MinifyHtml/View/Helper/MinifyHtmlHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="0.20059435" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="67" selection-start="301" selection-end="301" vertical-scroll-proportion="0.25" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Behavior/cachingBehavior.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="9" selection-start="1838" selection-end="1838" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Config/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="33" selection-start="5505" selection-end="5505" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Plugin/MinifyHtml/Vendor/html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="40" selection-start="5634" selection-end="5634" vertical-scroll-proportion="0.6344725" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="28" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.7355126" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Config/asset_compress.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="22" selection-start="1180" selection-end="1180" vertical-scroll-proportion="0.39528432" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/cake bake/config/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/cake bake/config/core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="80.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Config/core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="210.08333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Plugin/LogErrors/Controller/ErrorLogsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="50" selection-start="2637" selection-end="2637" vertical-scroll-proportion="-20.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Plugin/LogErrors/Lib/ErrorCheck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="36" selection-start="3214" selection-end="3214" vertical-scroll-proportion="-23.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Plugin/Combinator/View/Helper/CombinatorHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="53" selection-start="3607" selection-end="3607" vertical-scroll-proportion="-9.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="617" column="24" selection-start="18551" selection-end="18564" vertical-scroll-proportion="-3.8333333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Plugin/Combinator/README.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.14150943">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Plugin/LogErrors/View/ErrorLogs/view.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="61" selection-start="409" selection-end="409" vertical-scroll-proportion="-6.25">
+          <folding>
+            <marker date="1378286675058" expanded="false" signature="564:576" placeholder="..." />
+            <marker date="1378286675058" expanded="false" signature="660:670" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/cache-css/cache-1378187207-36dfb02abf057690ba916116581a188a.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Plugin/Combinator/Vendor/cssmin/cssmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="582" column="26" selection-start="15794" selection-end="15800" vertical-scroll-proportion="-1.2594937">
+          <folding>
+            <element signature="e#6#1476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/error.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Helper/CustomCombinatorHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="64" selection-start="624" selection-end="624" vertical-scroll-proportion="0.51004636">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="12" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.2847222">
+        <state line="30" column="3" selection-start="921" selection-end="921" vertical-scroll-proportion="0.31203565">
+          <folding>
+            <element signature="e#1215#1248#0" expanded="true" />
+            <marker date="1378303386746" expanded="true" signature="1504:1603" placeholder="..." />
+            <marker date="1378303386746" expanded="true" signature="1526:1603" placeholder="..." />
+            <marker date="1378303386746" expanded="true" signature="1546:1603" placeholder="..." />
+            <element signature="e#1838#2050#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Command/Task/FetchDataTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="11" selection-start="581" selection-end="581" vertical-scroll-proportion="0.53491825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Command/SendMailShell.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.19368723">
           <folding />
         </state>
       </provider>

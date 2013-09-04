@@ -22,34 +22,31 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <!DOCTYPE html>
 <html>
 <head>
-    <?php
-
-    $this->Combinator->add_libs('js', array('jquery.1.3.2'));
-    $this->Combinator->add_libs('css', array('bootstrap','main'));
-
-    echo $this->Combinator->scripts('js'); // Output Javascript files
-    echo $this->Combinator->scripts('css'); // Output CSS files
-
-    ?>
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php //echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
+    <?php
 
+    $this->CustomCombinator->add_libs('js', array('jquery.1.3.2'));
+    $this->CustomCombinator->add_libs('css', array('cake.generic','bootstrap'));
+
+    echo $this->CustomCombinator->scripts('js',false,'cache-');
+    echo $this->CustomCombinator->scripts('css',false,'cache-');
+
+    ?>
 	<?php
 		//echo $this->Html->meta('icon');
-
-		echo $this->Html->css('cake.generic');
-        echo $this->Html->script('jquery.1.3.2.js');
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-		echo $this->Js->event('click',$this->Js->alert('hey you!'));
+//		echo $this->Html->css('cake.generic');
+//        echo $this->Html->css('bootstrap');
+//        echo $this->Html->script('jquery.1.3.2.js');
+//		echo $this->fetch('meta');
+//		echo $this->fetch('css');
+//		echo $this->fetch('script');
 	?>
 </head>
 <body>
-
 	<div id="container">
 		<div id="header">
 			<h1><?php //echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
@@ -67,10 +64,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					'http://www.cakephp.org/',
 					array('target' => '_blank', 'escape' => false)
 				);*/
+			     /*echo $this->Html->link(
+					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+					'http://www.cakephp.org/',
+					array('target' => '_blank', 'escape' => false)
+				);*/
 			?>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump');
-    echo $this->MinifyHtml->afterLayout();?>
+	<?//php echo $this->element('sql_dump');
+    //echo $this->MinifyHtml->afterLayout();?>
 </body>
 </html>

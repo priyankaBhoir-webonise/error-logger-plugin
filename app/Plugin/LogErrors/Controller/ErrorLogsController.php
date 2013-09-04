@@ -20,6 +20,10 @@ class ErrorLogsController extends LogErrorsAppController
         ini_set('memory_limit', '256M');
         $this->autoRender=true;
         $errors=$this->paginate('ErrorLog',array('ErrorLog.is_resolved'=>$conditionResolved));
+        /*
+         * tring to cache the paginator
+         *
+         */
 //        if(Cache::read("$this->paginate('ErrorLog',array('ErrorLog.is_resolved'=>$conditionResolved))")){
 //            $errors=Cache::read("$this->paginate('ErrorLog',array('ErrorLog.is_resolved'=>$conditionResolved))");
 //        }
@@ -58,7 +62,7 @@ class ErrorLogsController extends LogErrorsAppController
             $result=$this->ErrorLog->save($data);
 
             $key='ErrorLog'.$this->ErrorLog->id;
-            $this->updateCache($key,$error);
+            Cache::write($key,$error);
         }
 
         $this->redirect(array('controller' => 'ErrorLogs', 'action' => 'view',$error['ErrorLog']['id']));
@@ -68,44 +72,23 @@ class ErrorLogsController extends LogErrorsAppController
         $this->ErrorLog->create();
         $result=$this->ErrorLog->save($data);
         $this->lastInsertedId=$this->ErrorLog->id;
-//        $key='ErrorLog'.$this->ErrorLog->id;
-//        $this->updateCache($key,$result);
-//        $transport = Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 25)
-//            ->setUsername('kvijay')
-//            ->setPassword('vijay6186')
-//        ;
-//        $mailer = Swift_Mailer::newInstance($transport);
-//        $body=print_r($data,true);
-//        // Create a message
-//        if(Configure::read('Email_id')){
-//            $dest=Configure::read('Email_id');
-//        }else{
-//            $dest='priyanka.bhoir@rocketmail.com';
-//        }
-//        $message = Swift_Message::newInstance("$data[error_message]")
-//            ->setFrom(array('priyanka.bhoir@weboniselab.com' => 'priyanka bhoir'))
-//            ->setTo(array($dest, $dest => 'priyanka'))
-//            ->setBody($body)
-//        ;
-//
-//        // Send the message
-//        $result = $mailer->send($message);
+    }
+    private function sendMail($destination,$data){
+        $transport = Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 25)
+            ->setUsername('kvijay')
+            ->setPassword('vijay6186')
+        ;
+        $mailer = Swift_Mailer::newInstance($transport);
+        $body=print_r($data,true);
+        // Create a message
+        $message = Swift_Message::newInstance("$data[error_message]")
+            ->setFrom(array('priyanka.bhoir@weboniselab.com' => 'priyanka bhoir'))
+            ->setTo(array($destination, $destination => 'priyanka'))
+            ->setBody($body)
+        ;
+
+        // Send the message
+        $result = $mailer->send($message);
     }
 
-    function updateCache($key,$data){
-//        $memcache = new Memcache();
-//        $memcache->connect('localhost', 11211) or die ("Could not connect");
-//        if($memcache->replace($key,$data,false,0)==false){
-//            $memcache->set($key,$data,false,0);
-//        }
-       Cache::write($key,$data);
-    }
-
-    function getCache($key){
-//        $memcache = new Memcached();
-//        $memcache->addServer('localhost',11211) or die ("Could not connect");
-        //$error=array();
-        $error=Cache::read($key);
-        return $error;
-    }
 }

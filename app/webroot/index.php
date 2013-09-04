@@ -37,6 +37,12 @@ if (!defined('DS')) {
  * The full path to the directory which holds "app", WITHOUT a trailing DS.
  *
  */
+function microtime_float()
+{
+    list($usec, $sec) = explode(" ", microtime());
+    return ((float)$usec + (float)$sec);
+}
+$time_start = microtime_float();
 if (!defined('ROOT')) {
 	define('ROOT', dirname(dirname(dirname(__FILE__))));
 }
@@ -108,3 +114,9 @@ $Dispatcher->dispatch(
 	new CakeRequest(),
 	new CakeResponse()
 );
+
+$time_end = microtime_float();
+$time = $time_end - $time_start;
+echo $time_start. '<br>';
+echo $time_end.'<br>';
+echo "executed in $time seconds\n";

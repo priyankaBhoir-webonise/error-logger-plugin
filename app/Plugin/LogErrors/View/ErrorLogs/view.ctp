@@ -1,4 +1,9 @@
-<?if(!empty($error)){
+<?php
+    $this->CustomCombinator->add_libs('css', array('main'));
+    echo $this->CustomCombinator->scripts('css',false,'view-');
+    $this->CustomCombinator->reset_lib_list('css');
+//        echo $this->Html->css('main');
+    if(!empty($error)){
     ?>
 <table>
     <tr>
