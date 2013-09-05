@@ -1,8 +1,9 @@
 [submodule "app/Plugin/AirbrakeCake"]
 	path = app/Plugin/AirbrakeCake
-
+	url = git://github.com/morrislaptop/AirbrakeCake.git
 [submodule "app/Plugin/Airbrake-Cake"]
 	path = app/Plugin/Airbrake-Cake
-
+	url = git://github.com/morrislaptop/AirbrakeCake.git
 [submodule "app/Plugin/Combinator"]
 	path = app/Plugin/Combinator
+	url = git@github.com:joshuapaling/CakePHP-Combinator-Plugin.git
