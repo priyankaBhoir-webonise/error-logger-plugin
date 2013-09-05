@@ -1,4 +1,3 @@
-
 error-logger-plugin
 ===================
 
@@ -36,3 +35,20 @@ Configure::write('enableEmail',array(
 ```
 
 -- receiver in the configurations should be valid email id to which all errors will be reported(mailed)
+
+Database :
+==========
+create table as :
+```
+CREATE TABLE IF NOT EXISTS `error_logs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `error_message` text NOT NULL,
+  `error_type` varchar(150) NOT NULL,
+  `error_stack` text NOT NULL,
+  `session_data` text NOT NULL,
+  `server_data` text NOT NULL,
+  `created` datetime NOT NULL,
+  `is_resolved` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+)
+```
