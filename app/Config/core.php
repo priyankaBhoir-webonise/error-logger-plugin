@@ -386,9 +386,15 @@ Configure::write('Exception', array(
 ));
 Configure::write('enableEmail',array(
         'enable'=>'1',
-        'receiver'=>'priyanka.bhoir@weboniselab.com',
-        'interval'=>array('days'=>'0','hours'=>'48')
-
+        'sender_email'=>'priyanka.bhoir@weboniselab.com',
+        'sender_name'=>'priyanka',
+        'receiver_email'=>'priyanka.bhoir@weboniselab.com',
+        'receiver_name'=>'priyanka',
+        'interval'=>array('hours'=>'48'),
+        'username'=>'kvijay',
+        'password'=>'vijay6186',
+        'host'=>'smtp.sendgrid.net',
+        'port'=>25
 ));
 //Configure::write('Sendgrid.username', 'kvijay');
 //Configure::write('Sendgrid.password', 'vijay6186');

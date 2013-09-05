@@ -29,10 +29,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	</title>
     <?php
 
-    //$this->CustomCombinator->add_libs('js', array('jquery.1.3.2'));
-    $this->CustomCombinator->add_libs('css', array('bootstrap'));
+    $this->CustomCombinator->add_libs('js', array('jquery.1.3.2'));
+    $this->CustomCombinator->add_libs('css', array('bootstrap','cake.generic'));
 
-    //echo $this->CustomCombinator->scripts('js',false,'cache-');
+    echo $this->CustomCombinator->scripts('js',false,'cache-');
     echo $this->CustomCombinator->scripts('css',false,'cache-');
 
     ?>

@@ -14,21 +14,22 @@ class SendMailShell extends AppShell
 
     public function main()
     {
-        if (Configure::read('enableEmail')) {
+
             $email = Configure::read('enableEmail');
-            $destination = $email['receiver'];
+        if ($email['enable']==1) {
+
             $interval=$email['interval']['hours'];
             $data = $this->FetchData->fetch($interval);
 
-            $transport = Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 25)
-                ->setUsername('kvijay')
-                ->setPassword('vijay6186');
+            $transport = Swift_SmtpTransport::newInstance($email['host'], $email['port'])
+                ->setUsername($email['username'])
+                ->setPassword($email['password']);
             $mailer = Swift_Mailer::newInstance($transport);
 
             // Create a message
             $message = Swift_Message::newInstance("Error Log updates")
-                ->setFrom(array('priyanka.bhoir@weboniselab.com' => 'priyanka bhoir'))
-                ->setTo(array($destination, $destination => 'priyanka'))
+                ->setFrom(array($email['sender_email'] => $email['sender_name']))
+                ->setTo(array($email['receiver_email'],$email['sender_email'] => $email['sender_name']))
                 ->setBody($data,'text/html');
 
             // Send the message

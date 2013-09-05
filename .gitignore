@@ -9,6 +9,7 @@ LogErr# User specific & automatically generated files #
 /dist
 /tags
 README.md
+.idea
 # OS generated files #
 ######################
 .DS_Store
