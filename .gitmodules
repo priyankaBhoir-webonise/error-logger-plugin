@@ -1,0 +1,8 @@
+[submodule "app/Plugin/AirbrakeCake"]
+	path = app/Plugin/AirbrakeCake
+
+[submodule "app/Plugin/Airbrake-Cake"]
+	path = app/Plugin/Airbrake-Cake
+
+[submodule "app/Plugin/Combinator"]
+	path = app/Plugin/Combinator

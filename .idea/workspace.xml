@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e99af69e-5692-4ede-9b96-d7f8be64608a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Plugin/AssetCompress/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Plugin/Combinator1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Plugin/LogErrors/Config/Schema/empty" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Plugin/LogErrors/Lib/empty" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Plugin/LogErrors/Vendor/empty" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/cache-css/cache-1376292338-754a8dbee69a188569b950880a3733c3.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/cache-css/cache-1378187207-36dfb02abf057690ba916116581a188a.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/new.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/webroot/new2.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitmodules" afterPath="$PROJECT_DIR$/.gitmodules" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Config/core.php" afterPath="$PROJECT_DIR$/app/Config/core.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Command/SendMailShell.php" afterPath="$PROJECT_DIR$/app/Console/Command/SendMailShell.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/View/Layouts/default.ctp" afterPath="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
     </list>
     <ignored path="cakephp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,8 +83,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitmodules" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name=".gitmodules" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitmodules">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="210" selection-end="210" vertical-scroll-proportion="0.17216642">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".editorconfig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.editorconfig">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -102,10 +101,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="22" selection-start="253" selection-end="253" vertical-scroll-proportion="0.25824964">
+            <state line="12" column="22" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CombinatorHelper.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Plugin/Combinator/View/Helper/CombinatorHelper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="14" selection-start="443" selection-end="443" vertical-scroll-proportion="-8.125">
               <folding />
             </state>
           </provider>
@@ -152,15 +160,15 @@
         <option value="$PROJECT_DIR$/app/webroot/index.php" />
         <option value="$PROJECT_DIR$/app/Plugin/LogErrors/Model/ErrorLog.php" />
         <option value="$PROJECT_DIR$/app/Plugin/LogErrors/Lib/ErrorCheck.php" />
-        <option value="$PROJECT_DIR$/app/Plugin/Combinator/View/Helper/CombinatorHelper.php" />
         <option value="$PROJECT_DIR$/app/View/Helper/CustomCombinatorHelper.php" />
         <option value="$PROJECT_DIR$/app/Console/Command/Task/FetchDataTask.php" />
         <option value="$PROJECT_DIR$/app/Plugin/LogErrors/Controller/ErrorLogsController.php" />
         <option value="$PROJECT_DIR$/app/Config/core.php" />
         <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
         <option value="$PROJECT_DIR$/app/Console/Command/SendMailShell.php" />
-        <option value="$PROJECT_DIR$/.gitmodules" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/Plugin/Combinator/View/Helper/CombinatorHelper.php" />
+        <option value="$PROJECT_DIR$/.gitmodules" />
       </list>
     </option>
   </component>
@@ -271,7 +279,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LogErrors" />
+              <option name="myItemId" value="Combinator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -355,6 +363,11 @@
       <created>1376453344802</created>
       <updated>1376453344802</updated>
     </task>
+    <task id="LOCAL-00001" summary="tgujhtju">
+      <created>1378383610115</created>
+      <updated>1378383610115</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -381,6 +394,7 @@
     <frame x="1412" y="-4" width="1549" height="905" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5453333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42933333" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -435,7 +449,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="tgujhtju" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -448,6 +462,7 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="tgujhtju" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -461,20 +476,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Plugin/Combinator/View/Helper/CombinatorHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="53" selection-start="3607" selection-end="3607" vertical-scroll-proportion="1.4035088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/css/bootstrap1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8262712">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/date.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="918" column="26" selection-start="26570" selection-end="26573" vertical-scroll-proportion="1.1783626">
@@ -570,16 +571,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitmodules">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Plugin/Combinator/View/Helper/CombinatorHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="14" selection-start="443" selection-end="443" vertical-scroll-proportion="-8.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.editorconfig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/.gitmodules">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="253" selection-end="253" vertical-scroll-proportion="0.25824964">
+        <state line="8" column="0" selection-start="210" selection-end="210" vertical-scroll-proportion="0.17216642">
           <folding />
         </state>
       </provider>
