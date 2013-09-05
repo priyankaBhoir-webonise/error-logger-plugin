@@ -39,6 +39,9 @@ class ErrorLogsController extends LogErrorsAppController
 
     }
 
+    /**
+     * @param null $id
+     */
     function view($id=null){
         if(!empty($id)){
             $key='ErrorLog'.$id;
@@ -50,6 +53,9 @@ class ErrorLogsController extends LogErrorsAppController
         }
     }
 
+    /**
+     * @param null $id
+     */
     function change($id=null){
         if(!empty($id)){
             $error=$this->ErrorLog->findById($id);
@@ -72,23 +78,6 @@ class ErrorLogsController extends LogErrorsAppController
         $this->ErrorLog->create();
         $result=$this->ErrorLog->save($data);
         $this->lastInsertedId=$this->ErrorLog->id;
-    }
-    private function sendMail($destination,$data){
-        $transport = Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 25)
-            ->setUsername('kvijay')
-            ->setPassword('vijay6186')
-        ;
-        $mailer = Swift_Mailer::newInstance($transport);
-        $body=print_r($data,true);
-        // Create a message
-        $message = Swift_Message::newInstance("$data[error_message]")
-            ->setFrom(array('priyanka.bhoir@weboniselab.com' => 'priyanka bhoir'))
-            ->setTo(array($destination, $destination => 'priyanka'))
-            ->setBody($body)
-        ;
-
-        // Send the message
-        $result = $mailer->send($message);
     }
 
 }

@@ -385,8 +385,9 @@ Configure::write('Exception', array(
     'log' => true
 ));
 Configure::write('enableEmail',array(
-        'receiver'=>'priyanka.bhoir@rocketmail.com',
-        'interval'=>array('days'=>'','hours'=>'')
+        'enable'=>'1',
+        'receiver'=>'priyanka.bhoir@weboniselab.com',
+        'interval'=>array('days'=>'0','hours'=>'48')
 
 ));
 //Configure::write('Sendgrid.username', 'kvijay');

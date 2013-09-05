@@ -29,17 +29,17 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	</title>
     <?php
 
-    $this->CustomCombinator->add_libs('js', array('jquery.1.3.2'));
-    $this->CustomCombinator->add_libs('css', array('cake.generic','bootstrap'));
+    //$this->CustomCombinator->add_libs('js', array('jquery.1.3.2'));
+    $this->CustomCombinator->add_libs('css', array('bootstrap'));
 
-    echo $this->CustomCombinator->scripts('js',false,'cache-');
+    //echo $this->CustomCombinator->scripts('js',false,'cache-');
     echo $this->CustomCombinator->scripts('css',false,'cache-');
 
     ?>
 	<?php
 		//echo $this->Html->meta('icon');
 //		echo $this->Html->css('cake.generic');
-//        echo $this->Html->css('bootstrap');
+//        echo $this->Html->css('bootstrap1');
 //        echo $this->Html->script('jquery.1.3.2.js');
 //		echo $this->fetch('meta');
 //		echo $this->fetch('css');
@@ -72,7 +72,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			?>
 		</div>
 	</div>
-	<?//php echo $this->element('sql_dump');
-    //echo $this->MinifyHtml->afterLayout();?>
+	<?php
+    echo $this->element('sql_dump');
+    ?>
 </body>
 </html>

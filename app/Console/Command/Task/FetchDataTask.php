@@ -10,7 +10,7 @@ App::uses('ErrorLog','Plugin/LogErrors/Model');
 
 class FetchDataTask extends AppShell {
 
-    public function fetch(){
+    public function fetch($interval){
         $errorLog=new ErrorLog();
 
         $errorLog->virtualFields['total']='COUNT(*)';
@@ -21,9 +21,21 @@ class FetchDataTask extends AppShell {
             ),
             'fields'=>array(
                 'error_type','total'
+            ),
+            'conditions'=>array(
+                'TIMESTAMPDIFF(HOUR,created,NOW()) <'=>$interval
             )
         ));
-        return $result;
+        if(empty($result)){
+            $dataToSend="No Error in last $interval hours\n";
+        }
+        else{
+            $dataToSend='';
+            foreach($result as $key=>$value){
+                $dataToSend.="The Error of type [<b> $key </b> ] is occured $value times in last $interval hours <br>";
+            }
+        }
+        return $dataToSend;
     }
 
 }
