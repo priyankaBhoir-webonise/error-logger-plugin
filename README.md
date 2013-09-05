@@ -28,8 +28,8 @@ optional configuration to add in the core.php
 Configure::write('Error_log_file','path/to/log file');
 Configure::write('enableEmail',array(
         'enable'=>'1',
-        'receiver'=>'priyanka.bhoir@weboniselab.com',
-        'interval'=>array('hours'=>'48')
+        'receiver'=>'username@example.com',
+        'interval'=>array('hours'=>'5')
 
 ));
 ```
